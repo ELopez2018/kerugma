@@ -30,7 +30,6 @@ public class StandEntity {
   private String poster;
 
   @ManyToOne(optional = false)
-  @JsonBackReference
   @JoinColumn(name = "congregation_id", nullable = false)
   private CongregationEntity congregation;
 

@@ -1,5 +1,6 @@
 package com.kerugma.infrastructure.persistence.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
@@ -24,7 +25,7 @@ public class CongregationEntity {
   @Column(name = "number", nullable = false)
   private String number;
 
-  @JsonManagedReference
+  @JsonBackReference
   @OneToMany(mappedBy = "congregation", cascade = CascadeType.ALL, orphanRemoval = true)
   private List<StandEntity> stands = new ArrayList<>();
 

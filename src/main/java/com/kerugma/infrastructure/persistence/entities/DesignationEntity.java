@@ -32,5 +32,11 @@ public class DesignationEntity {
   @ManyToMany(mappedBy = "designations", fetch = FetchType.EAGER)
   private List<UserEntity> users ;
 
-
+  public DesignationEntity(Long id, String description) {
+    this.id = id;
+    this.description = description;
+  }
+  public DesignationEntity(String description) {
+    this.description = description;
+  }
 }

@@ -55,6 +55,10 @@ public class PointEntity {
   @Column(precision = 9, scale = 6)
   private BigDecimal longitud;
 
+  @ManyToOne(optional = false)
+  @JoinColumn(name = "congregation_id", nullable = false)
+  private CongregationEntity congregation;
+
 
   @OneToMany(mappedBy = "point", cascade = CascadeType.ALL, orphanRemoval = true)
   private List<StandEntity> stands = new ArrayList<>();

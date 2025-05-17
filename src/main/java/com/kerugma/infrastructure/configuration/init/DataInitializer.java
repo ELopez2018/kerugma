@@ -18,16 +18,16 @@ public class DataInitializer implements CommandLineRunner {
 
   @Override
   public void run(String... args) throws Exception {
-//    if (designationRepository.count() == 0) {
-//        designationRepository.saveAll(Arrays.asList(
-//                new DesignationEntity(1L, "Publicador"),
-//                new DesignationEntity(2L, "Precursor Auxiliar"),
-//                new DesignationEntity(3L, "Precursor Regular"),
-//                new DesignationEntity(4L, "Precursor Especial"),
-//                new DesignationEntity(5L, "Siervo Ministerial"),
-//                new DesignationEntity(6L, "Anciano")
-//
-//      ));
-//    }
+    if (designationRepository.count() == 0) {
+        designationRepository.saveAll(Arrays.asList(
+                new DesignationEntity( "Publicador"),
+                new DesignationEntity( "Precursor Auxiliar"),
+                new DesignationEntity( "Precursor Regular"),
+                new DesignationEntity( "Precursor Especial"),
+                new DesignationEntity( "Siervo Ministerial"),
+                new DesignationEntity( "Anciano")
+
+      ));
+    }
   }
 }
